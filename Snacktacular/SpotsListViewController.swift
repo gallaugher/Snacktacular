@@ -9,8 +9,9 @@
 import UIKit
 import CoreLocation
 import Firebase
-import FirebaseAuthUI
-import FirebaseGoogleAuthUI
+import FirebaseUI
+import GoogleSignIn // added, replacing the line below
+//import FirebaseGoogleAuthUI
 
 class SpotsListViewController: UIViewController {
     

@@ -58,7 +58,7 @@ class Photo {
                 print("😡 ERROR during .putData storage upload for reference \(storageRef). Error: \(error!.localizedDescription)")
                 return
             }
-            print("😎 Upload worked! Metadata is \(metadata)")
+            print("😎 Upload worked! Metadata is \(metadata!)")
         }
         
         uploadTask.observe(.success) { (snapshot) in
@@ -79,7 +79,7 @@ class Photo {
         
         uploadTask.observe(.failure) { (snapshot) in
             if let error = snapshot.error {
-                print("*** ERROR: upload task for file \(self.documentUUID) failed, in spot \(spot.documentID)")
+                print("*** ERROR: upload task for file \(self.documentUUID) failed, in spot \(spot.documentID), error \(error)")
             }
             return completed(false)
         }

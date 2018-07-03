@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -148,7 +147,7 @@
                                 <rect key="frame" x="0.0" y="88" width="375" height="641"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="80" id="3ga-gw-Dih" customClass="SnackUserTableViewCell" customModule="Snacktacular" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="80" id="3ga-gw-Dih" customClass="SnackUserTableViewCell" customModule="Snacktacular" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3ga-gw-Dih" id="XQY-2u-j3J">
@@ -160,7 +159,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Display Name Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEQ-Ew-aiu">
-                                                    <rect key="frame" x="81" y="4" width="287" height="21"/>
+                                                    <rect key="frame" x="81" y="4" width="286" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="20"/>
                                                     <nil key="textColor"/>
@@ -652,7 +651,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xu6-al-XaR">
                                                     <rect key="frame" x="8" y="5" width="82" height="24"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="82" id="VQJ-1u-MEp"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="82" id="VQJ-1u-MEp"/>
                                                         <constraint firstAttribute="height" constant="24" id="pg4-Lf-fYM"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="17"/>
@@ -698,7 +697,7 @@
                                                     <rect key="frame" x="8" y="5" width="51" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="3Vn-3H-1hy"/>
-                                                        <constraint firstAttribute="width" constant="51" id="sxJ-YH-2e6"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="51" id="sxJ-YH-2e6"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="17"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -716,7 +715,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="posted: Dec. 32, 2019" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTQ-Mf-DNd">
                                                     <rect key="frame" x="192" y="5" width="175" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="175" id="imI-Mh-PNV"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="175" id="imI-Mh-PNV"/>
                                                         <constraint firstAttribute="height" constant="21" id="lA2-Wq-beA"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="AvenirNextCondensed-Italic" family="Avenir Next Condensed" pointSize="17"/>
@@ -725,12 +724,14 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="VMs-Q5-4vU" secondAttribute="trailing" constant="20" symbolic="YES" id="8Td-vA-YN0"/>
                                                 <constraint firstItem="mBR-ru-4Uf" firstAttribute="leading" secondItem="dzK-As-Z5b" secondAttribute="leading" constant="8" id="9Px-Rk-dbF"/>
                                                 <constraint firstItem="pTQ-Mf-DNd" firstAttribute="top" secondItem="dzK-As-Z5b" secondAttribute="top" constant="5" id="Pjo-5u-2Hm"/>
                                                 <constraint firstItem="VMs-Q5-4vU" firstAttribute="leading" secondItem="dzK-As-Z5b" secondAttribute="leading" constant="8" id="UQa-ny-J4m"/>
                                                 <constraint firstAttribute="trailing" secondItem="pTQ-Mf-DNd" secondAttribute="trailing" constant="8" id="YkZ-a1-7vH"/>
                                                 <constraint firstAttribute="trailing" secondItem="mBR-ru-4Uf" secondAttribute="trailing" constant="8" id="d8P-cv-OO7"/>
                                                 <constraint firstItem="mBR-ru-4Uf" firstAttribute="top" secondItem="VMs-Q5-4vU" secondAttribute="bottom" constant="3" id="fFs-jE-yuE"/>
+                                                <constraint firstItem="pTQ-Mf-DNd" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dzK-As-Z5b" secondAttribute="leading" constant="20" symbolic="YES" id="fQH-Ef-9qu"/>
                                                 <constraint firstItem="VMs-Q5-4vU" firstAttribute="top" secondItem="dzK-As-Z5b" secondAttribute="top" constant="5" id="sJb-df-W9f"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -749,7 +750,7 @@
                                                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxU-FH-8k0">
                                                     <rect key="frame" x="117.66666666666669" y="6" width="140" height="30"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="140" id="Cv1-4N-DxI"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="Cv1-4N-DxI"/>
                                                         <constraint firstAttribute="height" constant="30" id="Fin-Hh-eoJ"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
