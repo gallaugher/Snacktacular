@@ -28,6 +28,7 @@
 		3E951C4D20714FC1002100FA /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E951C4C20714FC1002100FA /* Photos.swift */; };
 		3E97BC42206C372B00DFAA8D /* UIView+addBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E97BC41206C372B00DFAA8D /* UIView+addBorder.swift */; };
 		3E9C33FC20670E8E00D78B04 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E9C33FB20670E8D00D78B04 /* GoogleService-Info.plist */; };
+		3EA7DE4C2115437E007E44FA /* READ_ME in Resources */ = {isa = PBXBuildFile; fileRef = 3EA7DE4B2115437E007E44FA /* READ_ME */; };
 		3EBC1E22206A9D5C006F9FA2 /* Double+roundTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC1E21206A9D5C006F9FA2 /* Double+roundTo.swift */; };
 		3EC9DFF22066DBE4007A947D /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC9DFF12066DBE4007A947D /* Spot.swift */; };
 		3EC9DFF42066DCBB007A947D /* Spots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC9DFF32066DCBB007A947D /* Spots.swift */; };
@@ -56,6 +57,7 @@
 		3E951C4C20714FC1002100FA /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
 		3E97BC41206C372B00DFAA8D /* UIView+addBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+addBorder.swift"; sourceTree = "<group>"; };
 		3E9C33FB20670E8D00D78B04 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		3EA7DE4B2115437E007E44FA /* READ_ME */ = {isa = PBXFileReference; lastKnownFileType = text; path = READ_ME; sourceTree = "<group>"; };
 		3EBC1E21206A9D5C006F9FA2 /* Double+roundTo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+roundTo.swift"; sourceTree = "<group>"; };
 		3EC9DFF12066DBE4007A947D /* Spot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spot.swift; sourceTree = "<group>"; };
 		3EC9DFF32066DCBB007A947D /* Spots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spots.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 		3E8390DE206597F600512DEA /* Snacktacular */ = {
 			isa = PBXGroup;
 			children = (
+				3EA7DE4B2115437E007E44FA /* READ_ME */,
 				3E8390DF206597F600512DEA /* AppDelegate.swift */,
 				3EC9DFF32066DCBB007A947D /* Spots.swift */,
 				3EC9DFF12066DBE4007A947D /* Spot.swift */,
@@ -206,6 +209,7 @@
 			files = (
 				3E8390EA206597F600512DEA /* LaunchScreen.storyboard in Resources */,
 				3E9C33FC20670E8E00D78B04 /* GoogleService-Info.plist in Resources */,
+				3EA7DE4C2115437E007E44FA /* READ_ME in Resources */,
 				3E8390E7206597F600512DEA /* Assets.xcassets in Resources */,
 				3E8390E5206597F600512DEA /* Main.storyboard in Resources */,
 			);
@@ -493,7 +497,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.profgallaugher.Snacktacular;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -509,7 +513,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.profgallaugher.Snacktacular;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

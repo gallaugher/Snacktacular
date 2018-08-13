@@ -1,0 +1,6 @@
+The Snacktacular project requires several steps to run. It may be more useful to use this project as a reference in case you run into trouble with your own work. To run the project, these steps will need to be completed:
+1 - install the cocoapods (you should know how to do this from a prior lesson - it will be reviewed in one of the Snacktacular video lessons). There is a podfile in this project, but it would be wise to visit the github page for each pod and update any lines in the podfile that might need a change to ensure that they are installing the latest version.
+2 - A GooglePlaces API Key - you can get this free from Google. Instructions at: https://developers.google.com/places/web-service/get-api-key
+3 - Once you get your own Google API key, open AppDelegate.swift and replace the String "YOUR_GOOGLE_PLACES_API_HERE" with your own Google API key.
+4 - You'll need to create an App on http://firebase.google.com, with database created and authorized in Cloud Firestore, and also setup Firebase Storage access in the app.
+5 - You'll need to download the GoogleService-Info.plist app from your own app that you create at firebase.google.com. Follow the steps to properly install this plist in your project, and configure your project to work with your firebase project (exact steps are in a video lesson for this chapter)

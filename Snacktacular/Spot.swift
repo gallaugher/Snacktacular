@@ -70,6 +70,7 @@ class Spot: NSObject, MKAnnotation {
         self.init(name: name, address: address, coordinate: coordinate, averageRating: averageRating, numberOfReviews: numberOfReviews, postingUserID: postingUserID, documentID: "")
     }
     
+        // NOTE: If you keep the same programming conventions (e.g. a calculated property .dictionary that converts class properties to String: Any pairs, the name of the document stored in the class as .documentID) then the only thing you'll need to change is the document path (i.e. the lines containing "spots" below.
     func saveData(completed: @escaping (Bool) -> ()) {
         let db = Firestore.firestore()
         // Grab the userID

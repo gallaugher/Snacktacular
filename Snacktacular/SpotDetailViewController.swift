@@ -66,7 +66,8 @@ class SpotDetailViewController: UIViewController {
         reviews = Reviews()
         photos = Photos()
         
-        let region = MKCoordinateRegionMakeWithDistance(spot.coordinate, regionDistance, regionDistance)
+        // code to create a region centered at spot's .coordinate, and zoomed in with map spanning roughly 750meters x 750meters
+        let region = MKCoordinateRegion(center: spot.coordinate, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
         mapView.setRegion(region, animated: true)
         updateUserInterface()
     }
@@ -153,7 +154,7 @@ class SpotDetailViewController: UIViewController {
         updateMap()
     }
     
-    // function to remove any old annotations and plot a new one for the current spot's coordinates.
+    // Call this function whenever a new annotation view needs to be plotted. Any previous annotations are removed before the new annotation is added.
     func updateMap() {
         mapView.removeAnnotations(mapView.annotations)
         mapView.addAnnotation(spot)
@@ -287,7 +288,7 @@ extension SpotDetailViewController: CLLocationManagerDelegate {
     
     func showAlertToPrivacySettings(title: String, message: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        guard let settingsURL = URL(string: UIApplicationOpenSettingsURLString) else {
+        guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else {
             print("Something went wrong getting the UIApplicationOpenSettingsURLString")
             return
         }
@@ -361,9 +362,11 @@ extension SpotDetailViewController: UICollectionViewDelegate, UICollectionViewDa
 
 extension SpotDetailViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+
         let photo = Photo()
-        photo.image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        photo.image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         
         dismiss(animated: true) {
             photo.saveData(spot: self.spot) { (success) in

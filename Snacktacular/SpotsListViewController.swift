@@ -137,8 +137,8 @@ extension SpotsListViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension SpotsListViewController: FUIAuthDelegate {
     func application(_ app: UIApplication, open url: URL,
-                     options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
-        let sourceApplication = options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String?
+                     options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
+        let sourceApplication = options[UIApplication.OpenURLOptionsKey.sourceApplication] as! String?
         if FUIAuth.defaultAuthUI()?.handleOpen(url, sourceApplication: sourceApplication) ?? false {
             return true
         }
@@ -198,8 +198,8 @@ extension SpotsListViewController: CLLocationManagerDelegate {
     
     func showAlertToPrivacySettings(title: String, message: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        guard let settingsURL = URL(string: UIApplicationOpenSettingsURLString) else {
-            print("Something went wrong getting the UIApplicationOpenSettingsURLString")
+        guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else {
+            print("Something went wrong getting the UIApplication.openSettingsURLString")
             return
         }
         let settingsActions = UIAlertAction(title: "Settings", style: .default) { value in

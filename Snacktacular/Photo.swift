@@ -44,7 +44,7 @@ class Photo {
         let db = Firestore.firestore()
         let storage = Storage.storage()
         // convert photo.image to a Data type so it can be saved by Firebase Storage
-        guard let photoData = UIImageJPEGRepresentation(self.image, 0.5) else {
+        guard let photoData = self.image.jpegData(compressionQuality: 0.5) else {
             print("*** ERROR: couuld not convert image to data format")
             return completed(false)
         }
